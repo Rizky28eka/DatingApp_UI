@@ -14,18 +14,6 @@ A premium, modern, and clean Dating Application UI built with Flutter. This proj
 
 ---
 
-## 📸 Screenshots
-
-| Profile Dashboard | Super Liked Me |
-| :---: | :---: |
-| ![Profile](https://i.postimg.cc/P58XXJ5W/Mac-Book-Air-1.png) | (Add SuperLike Screenshot) |
-
-| Matches Grid | Messages List |
-| :---: | :---: |
-| (Add Matches Screenshot) | (Add Messages Screenshot) |
-
----
-
 ## 🛠️ Tech Stack
 
 - **Framework**: [Flutter](https://flutter.dev/)
@@ -50,6 +38,7 @@ lib/
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Flutter SDK installed.
 - Android Studio / VS Code with Flutter extension.
 - An emulator or physical device.
@@ -57,21 +46,25 @@ lib/
 ### Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/yourusername/DatingApp_UI.git
    ```
 
 2. **Navigate to project directory**:
+
    ```bash
    cd DatingApp_UI
    ```
 
 3. **Install dependencies**:
+
    ```bash
    flutter pub get
    ```
 
 4. **Run the app**:
+
    ```bash
    flutter run
    ```
@@ -80,9 +73,10 @@ lib/
 
 ## 👨‍💻 Author
 
-**Rizky28eka**
+Rizky28eka
 
 ---
 
 ## 📄 License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

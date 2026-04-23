@@ -4,6 +4,8 @@ import 'package:datingapp_ui/styleguide/text_style.dart';
 import 'package:flutter/material.dart';
 
 class MessagesPage extends StatelessWidget {
+  const MessagesPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +57,8 @@ class MessagesPage extends StatelessWidget {
               ),
               itemBuilder: (context, index) {
                 return ListTile(
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   leading: Stack(
                     children: [
                       ClipOval(
@@ -86,7 +89,8 @@ class MessagesPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text("Anne", style: titleStyle.copyWith(fontSize: 18)),
-                      Text("14:20", style: subTitleStyle.copyWith(fontSize: 12)),
+                      Text("14:20",
+                          style: subTitleStyle.copyWith(fontSize: 12)),
                     ],
                   ),
                   subtitle: Padding(
