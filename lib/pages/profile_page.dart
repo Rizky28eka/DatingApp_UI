@@ -2,6 +2,8 @@ import 'package:datingapp_ui/common/my_info.dart';
 import 'package:datingapp_ui/common/opaque_image.dart';
 import 'package:datingapp_ui/common/profile_info_big_card.dart';
 import 'package:datingapp_ui/common/profile_info_card.dart';
+import 'package:datingapp_ui/pages/matches_page.dart';
+import 'package:datingapp_ui/pages/messages_page.dart';
 import 'package:datingapp_ui/pages/super_likes_me_page.dart';
 import 'package:datingapp_ui/styleguide/colors.dart';
 import 'package:datingapp_ui/styleguide/text_style.dart';
@@ -29,13 +31,25 @@ class ProfilePage extends StatelessWidget {
                         padding: const EdgeInsets.all(16),
                         child: Column(
                           children: [
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                "My Profile",
-                                textAlign: TextAlign.left,
-                                style: headingTextStyle,
-                              ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "My Profile",
+                                  textAlign: TextAlign.left,
+                                  style: headingTextStyle,
+                                ),
+                                IconButton(
+                                  icon: Icon(Icons.message, color: Colors.white, size: 30),
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) => MessagesPage(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ],
                             ),
                             MyInfo(),
                           ],
@@ -76,13 +90,22 @@ class ProfilePage extends StatelessWidget {
                       ),
                       TableRow(
                         children: [
-                          ProfileInfoBigCard(
-                            firstText: "264",
-                            secondText: "All matches",
-                            icon: Image.asset(
-                              "assets/icons/checklist.png",
-                              width: 32,
-                              color: blueColor,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => MatchesPage(),
+                                ),
+                              );
+                            },
+                            child: ProfileInfoBigCard(
+                              firstText: "264",
+                              secondText: "All matches",
+                              icon: Image.asset(
+                                "assets/icons/checklist.png",
+                                width: 32,
+                                color: blueColor,
+                              ),
                             ),
                           ),
                           ProfileInfoBigCard(
